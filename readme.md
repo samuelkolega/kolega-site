@@ -11,3 +11,19 @@ Drag & drop the folder to Netlify or push to a repo and set **Publish directory*
 
 ## Image credit pattern
 Add `data-credit` to any `<figure>`; a caption bar appears automatically.
+---------
+09/11
+# Kolega Site
+
+This is the main website for **Kolega Construct Pty Ltd** — a simple, static site currently under active development.
+
+## Purpose
+Used to test, style, and version-control live site changes safely before deployment.
+
+## Tech
+- HTML / CSS / JS
+- Netlify for deployment (planned)
+- Git + GitHub for version control
+
+## Author
+**Samuel Kolega**
