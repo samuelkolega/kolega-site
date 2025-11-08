@@ -1,0 +1,161 @@
+:root{--ink:#111;--ink-on:#fff;--muted:#6b6b6b;--accent:#0ea5e9;--card:#f7f7f7;--radius:14px;--radius-lg:22px;--shadow:0 8px 24px rgba(0,0,0,.08)}
+*{box-sizing:border-box}
+html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Noto Sans,Apple Color Emoji,Segoe UI Emoji;color:#222;background:#fff}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1080px;margin-inline:auto;padding-inline:20px}
+
+/* Header - black bar + stacked brand */
+header{position:sticky;top:0;z-index:50;background:#000;color:#fff;border-bottom:none}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.brand{display:flex;flex-direction:column;line-height:.88}
+/* Brand logo styling */
+.brand .k {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200; /* thin */
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+.brand .c {
+  font-family: "Futura", "Montserrat", "Oswald", sans-serif;
+  font-weight: 700; /* bold */
+  font-size: 34px;
+  letter-spacing: 0.5px;
+  margin-left: 4px;
+  text-transform: uppercase;
+}
+.nav a.btn{padding:.7rem 1rem;border:1px solid #fff;border-radius:999px;transition:.2s;font-weight:600;color:#fff}
+.nav a.btn.secondary{background:#fff;color:#111;border-color:#111}
+.nav a.btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(255,255,255,.18)}
+
+/* Hero */
+.hero{position:relative;isolation:isolate}
+.hero figure{position:relative;height:56vh;min-height:420px;margin:0;background:#000;overflow:hidden;border-bottom:1px solid #eee}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero .copy{position:relative;margin-top:-120px}
+.hero-card{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:28px;display:grid;gap:14px;max-width:760px}
+.eyebrow{letter-spacing:.18em;font-size:.8rem;color:#666;text-transform:uppercase}
+h1{margin:0;font-size:clamp(28px,5vw,44px);line-height:1.05}
+.sub{color:#555;font-size:1.05rem}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:.9rem 1.1rem;border-radius:999px;border:1px solid #111;background:#111;color:#fff;font-weight:600;transition:.2s}
+.btn.secondary{background:#fff;color:#111}
+.btn.outline{background:transparent;color:#111}
+.btn:focus-visible{outline:3px solid #80caff;outline-offset:2px}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 18px rgba(0,0,0,.12)}
+
+/* Sections */
+section{padding:64px 0}
+section h2{font-size:clamp(22px,4vw,32px);margin:0 0 12px;border-bottom:2px solid #000;display:inline-block;padding-bottom:6px}
+section p{color:#444;line-height:1.6}
+
+/* Services */
+.grid{display:grid;gap:16px}
+.services{grid-template-columns:repeat(12,1fr)}
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.service{grid-column:span 6}
+.service h3{margin:0 0 6px;font-size:1.05rem}
+.muted{color:#6d6d6d}
+
+/* Contact */
+.contact-wrap{display:grid;gap:28px;grid-template-columns:1.1fr .9fr;align-items:start}
+form{display:grid;gap:10px}
+input,textarea{padding:12px 14px;border:1px solid #dcdcdc;border-radius:10px;font:inherit}
+textarea{min-height:120px;resize:vertical}
+.form-actions{display:flex;gap:10px;align-items:center}
+.note{font-size:.9rem;color:#666}
+.success,.error{display:none;padding:12px 14px;border-radius:10px;font-weight:600}
+.success{background:#e8fbe8;color:#136b13}
+.error{background:#fdeaea;color:#8a1f1f}
+
+/* Footer */
+footer{padding:34px 0 80px;color:#666;border-top:1px solid #eee}
+footer a{color:#111;text-decoration:underline}
+
+/* Mobile CTA bar */
+.m-cta{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:60;display:flex;gap:10px;background:#111;color:#fff;padding:10px 12px;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.m-cta a{color:#fff}
+
+/* Caption */
+.fig-credit{position:absolute;left:0;bottom:0;width:100%;background:rgba(0,0,0,.5);color:#fff;font-size:.85rem;padding:8px 12px;display:none}
+.has-credit .fig-credit{display:block}
+
+/* Legal page */
+.legal-nav{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 24px}
+.legal-nav a{padding:8px 10px;border-radius:999px;border:1px solid #111}
+.legal h2{margin-top:28px}
+.legal h3{margin-top:20px}
+.legal ul{line-height:1.6}
+.legal li{margin:4px 0}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero .copy{margin-top:-90px}
+  .contact-wrap{grid-template-columns:1fr}
+  .service{grid-column:span 12}
+}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+
+/* ===== Forms ===== */
+.contact-wrap { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 800px) { .contact-wrap { grid-template-columns: 1fr 1fr; } }
+form#quoteForm { background: var(--card, #f7f7f7); padding: 16px; border-radius: var(--radius, 14px); border: 1px solid #e5e7eb; }
+.form-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.form-grid .wide { grid-column: 1 / -1; }
+@media (min-width: 700px) { .form-grid { grid-template-columns: 1fr 1fr; } }
+form label { display: grid; gap: 6px; font-size: 0.95rem; color: #111; }
+form input, form textarea { border: 1px solid #ccc; border-radius: 10px; padding: 10px 12px; font: inherit; }
+form input:focus-visible, form textarea:focus-visible { outline: 3px solid #7aa7ff; outline-offset: 2px; }
+.form-status { margin-top: 8px; font-size: .95rem; }
+.form-status.ok { color: #065f46; }
+.form-status.err { color: #991b1b; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; border: 0; }
+/* ===== KC Header & Hero fixes (Sept 2025) ===== */
+html, body { margin: 0; padding: 0; }
+header { background: #0b0b0c; margin: 0; }
+header .nav { padding: 16px 0; align-items: center; }
+.brand { display: inline-flex; align-items: baseline; gap: 6px; text-decoration: none; }
+.brand .k { font-weight: 800; letter-spacing: .06em; }
+.brand .c { font-weight: 600; opacity: .9; }
+
+/* Buttons incl. Instagram */
+.btn { display: inline-flex; align-items: center; gap: 8px; }
+
+/* Remove white line between header and hero */
+.hero { margin-top: 0; }
+.hero figure { margin: 0; line-height: 0; }
+.hero img { display: block; width: 100%; height: clamp(42vh, 56vh, 68vh); object-fit: cover; }
+
+/* Optional: more header height on desktop */
+@media (min-width: 960px) {
+  header .nav { padding: 20px 0; }
+}
+
+/* Hard override if any theme rule adds spacing above hero */
+header + .hero { margin-top: 0 !important; border-top: 0 !important; }
+
+/* Prevent subpixel gap between header and hero on high-DPI */
+header { border-bottom: 0; box-shadow: 0 0 0 0 transparent; }
+.hero { border-top: 0; }
+
+/* === Instagram button & small text utility === */
+.btn.icon { padding: .7rem .9rem; }
+.btn.icon .ig { display: block; }
+.btn.icon .hide-sm { margin-left: 6px; }
+header .actions .btn.icon { border-color:#fff; color:#fff; background:transparent; }
+header .actions .btn.icon:hover { background:rgba(255,255,255,.12); }
+
+/* Hide helper text on small screens */
+@media (max-width: 640px){
+  .hide-sm { display:none; }
+}
+
+/* Ensure no gap between header and hero */
+header + .hero { margin-top: 0 !important; border-top: 0 !important; }
+.hero figure { margin: 0; line-height: 0; }
+.hero img { display:block; }
+
+/* Utility for Instagram icon vertical alignment when text hidden */
+.actions .btn.icon svg { vertical-align: middle; }

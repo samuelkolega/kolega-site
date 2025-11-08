@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+
+# Serve index at root
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+# Force HTTPS for any host
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
