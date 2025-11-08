@@ -1,0 +1,27 @@
+# macOS junk
+.DS_Store
+
+# Node / npm
+node_modules/
+npm-debug.log
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Build folders
+dist/
+build/
+.cache/
+
+# System / editor stuff
+.vscode/
+.idea/
+*.swp
+
+# Docker / n8n
+docker-compose.override.yml
+docker-data/
