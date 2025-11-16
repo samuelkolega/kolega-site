@@ -7,9 +7,9 @@ img{max-width:100%;display:block}
 
 /* Header - black bar + stacked brand */
 header{position:sticky;top:0;z-index:50;background:#000;color:#fff;border-bottom:none}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:6px 0}
 .brand{display:inline-flex;align-items:center}
-.brand img{height:54px;width:auto;display:block}
+.brand img{height:72px;width:auto;display:block}
 .actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .nav-link{font-size:.95rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff}
 .nav-link:hover,.nav-link:focus-visible{text-decoration:underline}
@@ -148,6 +148,6 @@ header + .hero { margin-top: 0 !important; border-top: 0 !important; }
 
 /* Mobile header handling */
 @media (max-width:720px){
-  .nav{gap:16px;padding:10px 0}
-  .brand img{height:44px}
+  .nav{gap:16px;padding:6px 0}
+  .brand img{height:60px}
 }
