@@ -65,32 +65,32 @@
   </div>
 </section>
 
-<section class="container" id="quote" aria-labelledby="quote-title">
-  <h2 id="quote-title">Request a quote</h2>
-  <div class="contact-wrap">
-    <div>
-      <p><strong>Call:</strong> <a href="tel:0419664019">0419 664 019</a><br>
-      <strong>Email:</strong> <a href="mailto:sam@kolegaconstruct.com.au">sam@kolegaconstruct.com.au</a></p>
-      <p class="note">Prefer email? Use the form and we’ll get back to you within 24 hours.</p>
-    
-    <form id="quoteForm" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
-      <input type="hidden" name="form-name" value="quote">
-      <p class="visually-hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
-      <div class="form-grid">
-        <label>Full name<input type="text" name="name" required autocomplete="name"></label>
-        <label>Email<input type="email" name="email" required autocomplete="email"></label>
-        <label>Phone<input type="tel" name="phone" required autocomplete="tel"></label>
-        <label>Suburb / address<input type="text" name="location" autocomplete="address-level2"></label>
-        <label class="wide">Job details<textarea name="details" rows="5" required placeholder="Tell us about the job — scope, timing, site notes."></textarea></label>
+  <section class="container" id="quote" aria-labelledby="quote-title">
+    <h2 id="quote-title">Request a quote</h2>
+    <div class="contact-wrap">
+      <div>
+        <p><strong>Call:</strong> <a href="tel:0419664019">0419 664 019</a><br>
+        <strong>Email:</strong> <a href="mailto:sam@kolegaconstruct.com.au">sam@kolegaconstruct.com.au</a></p>
+        <p class="note">Prefer email? Use the form and we’ll get back to you within 24 hours.</p>
       </div>
-      <button type="submit" class="btn">Send request</button>
-      <p id="form-success" class="form-status ok" role="status" hidden>Thanks — we’ve got your request. We’ll reply within 24 hours.</p>
-      <p id="form-error" class="form-status err" role="status" hidden>Sorry, something went wrong. Please try again or email us.</p>
-    </form>
+
+      <form id="quoteForm" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
+        <input type="hidden" name="form-name" value="quote">
+        <p class="visually-hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="form-grid">
+          <label>Full name<input type="text" name="name" required autocomplete="name"></label>
+          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+          <label>Phone<input type="tel" name="phone" required autocomplete="tel"></label>
+          <label>Suburb / address<input type="text" name="location" autocomplete="address-level2"></label>
+          <label class="wide">Job details<textarea name="details" rows="5" required placeholder="Tell us about the job — scope, timing, site notes."></textarea></label>
+        </div>
+        <button type="submit" class="btn">Send request</button>
+        <p id="form-success" class="form-status ok" role="status" hidden>Thanks — we’ve got your request. We’ll reply within 24 hours.</p>
+        <p id="form-error" class="form-status err" role="status" hidden>Sorry, something went wrong. Please try again or email us.</p>
+      </form>
     </div>
 
-  
-</section>
+  </section>
 
 <footer>
   <div class="container">
